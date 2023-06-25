@@ -13,9 +13,6 @@ const copyUser = {
 const copySuperUser = {...user}
 
 
-
-
-
 const users = [
     {
         id: 1,
@@ -26,7 +23,7 @@ const users = [
         id: 2,
         name: "Bob",
         isStudent: true
-    },    {
+    }, {
         id: 3,
         name: "Tom",
         isStudent: true
@@ -79,4 +76,24 @@ const suoerUser2 = {
     ...superUser,
     address: {...superUser.address, city: "Bobrujsk"}
 }
-console.log(suoerUser2)
+
+
+const suoerUser3 = {
+    ...superUser,
+    address: {
+        ...superUser.address, geo: {
+            "lat": "-27.3159",
+            "lng": "11.1496"
+        }
+    }
+}
+const suoerUser4 = {
+    ...superUser,
+    address: {
+        ...superUser.address,
+        geo: {
+            ...superUser.address.geo,
+            "lat": "-27.3159"
+        }
+    }
+}
