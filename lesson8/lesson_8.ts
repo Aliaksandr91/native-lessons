@@ -2,7 +2,7 @@
 // числа (неопределённое кол-во) и возвращает их сумму (rest).
 
 export function sum(...nums: Array<number>): number {
-    return nums.reduce((acc, num) => acc += num, 0)
+    return nums.reduce((acc, num) => acc + num, 0)
 }
 
 
@@ -37,7 +37,7 @@ export function getTriangleType(a: number, b: number, c: number): string {
 export function getSum(number: number): number {
     //...здесь пишем код.
     // В return стоит "заглушка", чтоб typescript не ругался
-    return number.toString().split('').reduce((acc, num) => acc += Number(num), 0)
+    return number.toString().split('').reduce((acc, num) => acc + Number(num), 0)
 }
 
 
@@ -53,9 +53,9 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
     let oddSum = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (i % 2 === 0) { // чётный индекс
+        if (i % 2 === 0) {
             evenSum += arr[i];
-        } else { // нечётный индекс
+        } else {
             oddSum += arr[i];
         }
     }
@@ -71,7 +71,7 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
 export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
     //...здесь пишем код.
     // В return стоит "заглушка", чтоб typescript не ругался
-    return array.filter(el => el > 0 && el % 1 === 0).map(el => el**2)
+    return array.filter(el => el > 0 && el % 1 === 0).map(el => el ** 2)
 }
 
 // 6. Функция принимает параметром целое не отрицательное число N и возвращает сумму всех чисел от 0 до N включительно
@@ -80,7 +80,13 @@ export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
 export function sumFirstNumbers(N: number): number {
     //...здесь пишем код.
     // В return стоит "заглушка", чтоб typescript не ругался
-    return 0
+    let sum = 0;
+    let num = 0;
+    while (num <= N) {
+        sum = sum + num
+        num = num + 1
+    }
+    return sum
 }
 
 // ...и "лапку" вверх!!!!
@@ -97,5 +103,7 @@ export function sumFirstNumbers(N: number): number {
 export function getBanknoteList(amountOfMoney: number): Array<number> {
     //...здесь пишем код.
     // В return стоит "заглушка", чтоб typescript не ругался
+    const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+    
     return [1]
 }
