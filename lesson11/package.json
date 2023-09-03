@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module",
+  "name": "js-11",
+  "version": "1.0.0",
+  "description": "lesson-11",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Aliaksandr",
+  "license": "MIT"
+}
