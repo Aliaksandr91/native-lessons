@@ -120,13 +120,6 @@ console.log(10)
 
 
 
-while(true) {
-    
-}
-
-
-
-
 
 
 
